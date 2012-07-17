@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QFileSystemModel>
 
 namespace Ui {
   class MainWindow;
@@ -18,10 +19,12 @@ public:
   void setupTreeView();
 
 private slots:
+  void setWorkingDirectory();
 
 private:
   Ui::MainWindow *ui;
 
+  QFileSystemModel *model;
 };
 
 #endif // MAINWINDOW_H
